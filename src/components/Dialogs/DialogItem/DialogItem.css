@@ -1,0 +1,16 @@
+
+.dialogs__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  height: 30px;
+  padding: 15px 0;
+  font-style: oblique;
+  font-weight: bolder;
+}
+
+.dialogs__item--active {
+  background-color: #ff4c51;
+}

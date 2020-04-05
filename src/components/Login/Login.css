@@ -1,0 +1,14 @@
+.login__sign {
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.login__link {
+    transition: 0.3s;
+}
+
+.login__link:hover {
+    color: #d30f00;
+    font-size: 45px;
+}

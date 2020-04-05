@@ -1,0 +1,25 @@
+.personal-information__item-status {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.status__text {
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px 0;
+}
+
+.status__input {
+    background-color: #4e080b;
+    box-shadow: 0 0 10px #4e080b;
+    border: 0;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 100%;
+}

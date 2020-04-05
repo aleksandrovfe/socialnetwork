@@ -1,0 +1,30 @@
+.dialog__input {
+    resize: none;
+    padding: 10px;
+    font-size: 19px;
+    outline: none;
+    background-color: rgb(134, 87, 87);
+    border: 0;
+    color: white;
+    height: 100px;
+    width: 70%;
+    margin: 20px 0 0;
+}
+
+.btn__new-message {
+    display: block;
+    background-color: rgb(177, 94, 94);
+    font-weight: 600;
+    color: white;
+    transition: 0.2s;
+    width: 73%;
+    height: 40px;
+}
+
+.btn__new-message:hover {
+    background-color: #d46d19;
+}
+
+.btn__new-message:active {
+    background-color: #20d419;
+}

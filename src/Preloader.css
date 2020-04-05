@@ -1,0 +1,189 @@
+.animation {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cssload-square {
+    width: 5px;
+    height: 29px;
+    background: lightgray;
+    border-radius: 10px;
+    display: block;
+    animation: cssload-turn 2s ease infinite;
+    -o-animation: cssload-turn 2s ease infinite;
+    -ms-animation: cssload-turn 2s ease infinite;
+    -webkit-animation: cssload-turn 2s ease infinite;
+    -moz-animation: cssload-turn 2s ease infinite;
+}
+
+.cssload-top {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+}
+
+.cssload-bottom {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+}
+
+.cssload-left {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+}
+
+.cssload-right {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+}
+
+@keyframes cssload-turn {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateX(400%) translateY(100%) rotate(90deg);
+    }
+    100% {
+        transform: translateX(0) translateY(0) rotate(0);
+    }
+}
+
+@-o-keyframes cssload-turn {
+    0% {
+        -o-transform: translateX(0) translateY(0) rotate(0);
+    }
+    50% {
+        -o-transform: translateX(400%) translateY(100%) rotate(90deg);
+    }
+    100% {
+        -o-transform: translateX(0) translateY(0) rotate(0);
+    }
+}
+
+@-ms-keyframes cssload-turn {
+    0% {
+        -ms-transform: translateX(0) translateY(0) rotate(0);
+    }
+    50% {
+        -ms-transform: translateX(400%) translateY(100%) rotate(90deg);
+    }
+    100% {
+        -ms-transform: translateX(0) translateY(0) rotate(0);
+    }
+}
+
+@-webkit-keyframes cssload-turn {
+    0% {
+        -webkit-transform: translateX(0) translateY(0) rotate(0);
+    }
+    50% {
+        -webkit-transform: translateX(400%) translateY(100%) rotate(90deg);
+    }
+    100% {
+        -webkit-transform: translateX(0) translateY(0) rotate(0);
+    }
+}
+
+@-moz-keyframes cssload-turn {
+    0% {
+        -moz-transform: translateX(0) translateY(0) rotate(0);
+    }
+    50% {
+        -moz-transform: translateX(400%) translateY(100%) rotate(90deg);
+    }
+    100% {
+        -moz-transform: translateX(0) translateY(0) rotate(0);
+    }
+}
+
+.form {
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.input {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    font-size: 16px;
+    width: 50px;
+    transition: width 0.3s ease;
+}
+
+.search_img {
+    margin-right: 5px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.form:focus-within {
+    background: rgba(0,0,0,0.05);
+    border-bottom: 2px solid gray;
+}
+
+button svg path {
+    fill: #757575;
+}
+
+.clear:focus,
+.clear:hover,
+.close:focus svg path,
+.close:hover svg path {
+    fill: #424242;
+    color: #424242;
+    transition: all 0.3s ease;
+}
+
+.input:focus {
+    width: 200px;
+    cursor: initial;
+}
+
+.bulkhead {
+    width: 1px;
+    height: 100%;
+    background: #757575;
+    margin: 0 5px;
+    display: none;
+}
+
+.form:focus-within .clear,
+.form:focus-within .close,
+.form:focus-within .bulkhead {
+    display: block;
+}

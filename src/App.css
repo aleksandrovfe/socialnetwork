@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(80, 60, 60);
+}
+
+.app-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas: 
+  "header header"
+  "nav profile";
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-wrapper-content {
+  background-color: rgb(80, 60, 60);
+  padding: 0 10px;
+}
+
+.btn {
+  background-color: grey;
+  border: 0;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+}
+

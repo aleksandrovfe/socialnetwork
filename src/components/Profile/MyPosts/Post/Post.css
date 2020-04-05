@@ -1,0 +1,18 @@
+.post-item {
+    margin-top: 20px;
+    color: white;
+    max-width: 480px;
+    background-color: #4e080b;
+    padding: 10px;
+}
+
+.post-item__likes {
+    color: white;
+    margin-right: 10px;
+}
+
+.btn__like {
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+}

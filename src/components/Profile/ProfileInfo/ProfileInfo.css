@@ -1,0 +1,54 @@
+.main__img {
+  width: 101%;
+  height: 200px;
+}
+
+.description {
+  display: flex;
+  margin: 20px 0;
+}
+
+.avatar__img {
+  width: 200px;
+  height: 215px;
+}
+
+.personal-information {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.personal-information__item,
+.personal-information__item-present,
+.personal-information__item-absent {
+  padding: 3px;
+  margin: 0 5px 5px 10px;
+}
+
+.personal-information__item-present {
+  border: 1px solid lightgreen;
+}
+
+.personal-information__item-absent {
+  border: 1px solid red;
+}
+
+.personal-information__name {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.personal-information__items-list-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.personal-information__items-presents {
+  display: flex;
+  align-items: center;
+}
+
+.personal-information__item-loking-for-job {
+  text-transform: uppercase;
+}
