@@ -5,6 +5,7 @@
 
 .description {
   display: flex;
+  flex-direction: column;
   margin: 20px 0;
 }
 
@@ -17,13 +18,14 @@
   display: flex;
   flex-direction: column;
   color: white;
+  margin-left: 10px;
 }
 
 .personal-information__item,
 .personal-information__item-present,
 .personal-information__item-absent {
   padding: 3px;
-  margin: 0 5px 5px 10px;
+  margin: 0 5px 5px 0px;
 }
 
 .personal-information__item-present {
@@ -42,6 +44,7 @@
 .personal-information__items-list-contacts {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
 }
 
 .personal-information__items-presents {
@@ -51,4 +54,36 @@
 
 .personal-information__item-loking-for-job {
   text-transform: uppercase;
+}
+
+.description__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.personal-information__load-photo-btn {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.personal-information__load-photo-lable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 200px;
+  background-color: #ff4c51;
+  text-transform: uppercase;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.personal-information__load-photo-lable:hover {
+  background-color: white;
+  color: red;
+  box-shadow: 0 0 10px red;
 }

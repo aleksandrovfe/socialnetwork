@@ -2,7 +2,6 @@ import {follow, getUsersThunkCreator, setCurrentPage, unfollow} from "../../redu
 import {connect} from "react-redux";
 import React from 'react';
 import Users from "./Users/Users";
-import {Preloader} from "../../Preloader";
 import WithAuthRedirect from "../../HOC/WithAuthRedirect";
 import {compose} from "redux";
 import {
