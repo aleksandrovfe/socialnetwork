@@ -1,9 +1,10 @@
-import {getProfile, getUsersStatus, savePhotoAPI, updateUserStatus} from "../api/api";
+import {getProfile, getUsersStatus, savePhotoAPI, saveProfileInfoAPI, updateUserStatus} from "../api/api";
 
 const ADD_POST = 'ADD_POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_USER_STATUS = 'SET_USER_STATUS';
 const SAVE_PHOTO = 'SAVE_PHOTO';
+const SAVE_PROFILE = 'SAVE_PROFILE';
 
 const initalState = {
         ProfileData: [
@@ -39,6 +40,11 @@ export const profileReducer = (state = initalState, action) => {
                 ...state,
                 profile: {...state.profile, photos: action.file},
             };
+        case SAVE_PROFILE:
+            return {
+                ...state,
+                profile: {...state.profile, data: action.file},
+            };
 
         default:
             return state;
@@ -63,6 +69,11 @@ export const setUserStatus = status => ({
 export const savePhotoSuccess = file => ({
     type: SAVE_PHOTO,
     file,
+});
+
+export const saveProfileSuccess = profile => ({
+    type: SAVE_PROFILE,
+    profile,
 });
 
 export const getProfileThunk = (id) => {
@@ -96,6 +107,16 @@ export const savePhotoThunk = (file) => {
         if (response.data.resultCode === 0) {
             dispatch(savePhotoSuccess(response.data.data.photos));
         }
+    };
+};
+
+export const saveProfileInfoThunk = (data, userId) => {
+    return async(dispatch) => {
+        const response = await saveProfileInfoAPI(data);
+
+        if (response.data.resultCode === 0) {
+            dispatch(getProfileThunk(userId));
+        } 
     };
 };
 

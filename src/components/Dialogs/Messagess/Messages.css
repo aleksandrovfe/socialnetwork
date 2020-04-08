@@ -1,4 +1,7 @@
 .dialog__conv {
   color: white;
   margin-bottom: 20px;
+  background-color: black;
+  padding: 10px;
+  width: 480px;
 }

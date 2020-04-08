@@ -22,6 +22,7 @@ const Users = props => {
                             </div>
                             <div className="user__description">
                                 <h3 className="user__description-item">{el.name}</h3>
+                                {el.status && <p className="user__description-item-status">{el.status}</p>}
                             </div>
                         </div>
                     ))

@@ -2,7 +2,13 @@ import React from 'react';
 import './Profile.css';
 import Profile from "./Profile";
 import {connect} from "react-redux";
-import {getProfileThunk, getStatusThunk, savePhotoThunk, updateStatusThunk} from "../../redux/profile-reducer";
+import {
+    getProfileThunk,
+    getStatusThunk,
+    savePhotoThunk,
+    saveProfileInfoThunk,
+    updateStatusThunk
+} from "../../redux/profile-reducer";
 import {withRouter} from "react-router-dom";
 import WithAuthRedirect from "../../HOC/WithAuthRedirect";
 import {compose} from "redux";
@@ -50,6 +56,7 @@ export default compose(
         getStatusThunk,
         updateStatusThunk,
         savePhotoThunk,
+        saveProfileInfoThunk,
     })
 )(ProfileContainer);
 

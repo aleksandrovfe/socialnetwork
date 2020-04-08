@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   margin: 20px 0;
+  color: black;
 }
 
 .avatar__img {
@@ -17,7 +18,6 @@
 .personal-information {
   display: flex;
   flex-direction: column;
-  color: white;
   margin-left: 10px;
 }
 
@@ -26,34 +26,44 @@
 .personal-information__item-absent {
   padding: 3px;
   margin: 0 5px 5px 0px;
-}
-
-.personal-information__item-present {
-  border: 1px solid lightgreen;
-}
-
-.personal-information__item-absent {
-  border: 1px solid red;
+  color: white;
 }
 
 .personal-information__name {
   font-size: 25px;
   text-transform: uppercase;
+  background-color: black;
+  padding: 10px;
+  box-shadow: 0 0 10px black;
+}
+
+.personal-information__about-me {
+  color: black;
+  max-width: 500px;
 }
 
 .personal-information__items-list-contacts {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 10px;
+  background-color: black;
+  padding: 15px;
+  box-shadow: 0 0 10px black;
 }
 
 .personal-information__items-presents {
   display: flex;
   align-items: center;
+  color: black;
+}
+
+.personal-information__bold-text {
+  color: white;
 }
 
 .personal-information__item-loking-for-job {
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .description__wrapper {
@@ -76,14 +86,82 @@
   justify-content: center;
   height: 30px;
   width: 200px;
-  background-color: #ff4c51;
+  background-color: #e7555a;
   text-transform: uppercase;
   transition: 0.3s;
   cursor: pointer;
 }
 
 .personal-information__load-photo-lable:hover {
-  background-color: white;
-  color: red;
-  box-shadow: 0 0 10px red;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 10px black;
+}
+
+.personal-information__input {
+  color: black;
+}
+
+.personal-information__edit-btn {
+  margin: 10px 0;
+  height: 30px;
+  width: 200px;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  background-color: black;
+}
+
+.personal-information__edit-btn:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 10px black;
+}
+
+.personal-information__save-btn {
+  border: 1px solid white;
+  transition: 0.3s;
+}
+
+.personal-information__save-btn:hover {
+  border: 0;
+  box-shadow: 0 0 10px white;
+}
+
+.personal-information__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  padding: 15px;
+  background-color: black;
+  box-shadow: 0 0 10px black;
+}
+
+.personal-information__form-field {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 15px;
+}
+
+.personal-information__input {
+  outline: none;
+  width: 330px;
+  height: 25px;
+  font-size: 17px;
+}
+
+.personal-information__text-area {
+  outline: none;
+  width: 330px;
+  height: 25px;
+  font-size: 17px;
+  resize: none;
+  color: black;
+  height: 70px;
+}
+
+.personal-information__checbox {
+  margin-left: -85px;
 }

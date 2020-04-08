@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  background-color: rgb(80, 60, 60);
+  background-color: rgb(214, 206, 206);
 }
 
 .app-wrapper {
@@ -24,7 +24,6 @@ body {
 }
 
 .app-wrapper-content {
-  background-color: rgb(80, 60, 60);
   padding: 0 10px;
 }
 

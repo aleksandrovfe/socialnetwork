@@ -47,6 +47,10 @@ export const logoutAPI = () => (
     instance.delete(`${baseUrl}auth/login`)
 );
 
+export const saveProfileInfoAPI = profile => (
+    instance.put(`${baseUrl}profile`, profile)
+);
+
 export const savePhotoAPI = file => {
     const formData = new FormData();
     formData.append("image", file);
@@ -57,3 +61,4 @@ export const savePhotoAPI = file => {
         }
     } )
 };
+
