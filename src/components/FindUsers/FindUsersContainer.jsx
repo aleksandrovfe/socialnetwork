@@ -8,12 +8,14 @@ import {
     getCurrentPageSelector, getisFatchingSelector, getisFollowingProcessSelector,
     getPageSizeSelector, getPortionSizeSelector,
     getTotalCountSelector,
-    getUsersSelector
+    getUsersSelector, getIdSelector
 } from "../../redux/users-selectors";
+import {getUserAvatarThunk} from '../../redux/profile-reducer';
 
 class FindUserContainer extends React.Component {
     componentDidMount() {
         this.props.getUsersThunkCreator(this.props.currentPage, this.props.pageSize);
+        this.props.getUserAvatarThunk(this.props.authorizedUserId);
     }
 
     onChangePage = pageNumber => {
@@ -22,13 +24,7 @@ class FindUserContainer extends React.Component {
 
     render() {
         return <>
-             <Users totalCount={this.props.totalCount} pageSize={this.props.pageSize}
-                    currentPage={this.props.currentPage} UsersData={this.props.UsersData}
-                    unfollowClick={this.props.unfollowClick} followClick={this.props.followClick}
-                    onChangePage={this.onChangePage} isFollowingProcess={this.props.isFollowingProcess}
-                    follow={this.props.follow} unfollow={this.props.unfollow}
-                    portionSize={this.props.portionSize} isFatching={this.props.isFatching}
-             />
+            <Users onChangePage={this.onChangePage} {...this.props}/>
         </>
     }
 }
@@ -41,15 +37,17 @@ const mapStateToProps = state => ({
     currentPage: getCurrentPageSelector(state),
     isFatching: getisFatchingSelector(state),
     isFollowingProcess: getisFollowingProcessSelector(state),
+    authorizedUserId: getIdSelector(state),
 });
 
-export default  compose(
+export default compose(
     WithAuthRedirect,
     connect(mapStateToProps, {
         setCurrentPage,
         getUsersThunkCreator,
         follow,
         unfollow,
+        getUserAvatarThunk,
     }),
 )(FindUserContainer);
 

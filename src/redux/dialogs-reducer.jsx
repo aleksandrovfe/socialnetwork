@@ -10,9 +10,9 @@ const initislState = {
 
     MessagesData: [
         {message: 'Hi', id: 1},
-        {message: 'It"s me', id: 2},
-        {message: 'HRU', id: 3},
-        {message: 'BRB', id: 4},
+        {message: 'How are you today?', id: 2},
+        {message: 'Happy new Year', id: 3},
+        {message: 'Happy Birthday ', id: 4},
     ],
 };
 

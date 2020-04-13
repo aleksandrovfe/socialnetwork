@@ -1,32 +1,39 @@
+.add-message__wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .dialog__input {
     resize: none;
-    padding: 15px;
-    font-size: 19px;
+    padding: 10px;
+    font-size: 13px;
     outline: none;
-    background-color: black;
+    background-color: white;
     border: 0;
-    color: white;
-    height: 150px;
-    width: 73%;
-    margin: 20px 0 0;
+    color: black;
+    height: 44px;
+    width: 68%;
     box-sizing: border-box;
+    margin-right: 20px;
+    border: 1px solid #D2D2D2;
 }
 
 .btn__new-message {
     display: block;
-    background-color: black;
-    font-weight: 600;
+    background-color: #142668;
     color: white;
     transition: 0.2s;
-    width: 73%;
-    height: 40px;
+    width: 20%;
+    height: 44px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    transition: 0.3s;
 }
 
 .btn__new-message:hover {
-    box-shadow: 0 0 10px black;
-}
-
-.btn__new-message:active {
-    box-shadow: 0 0 10px #20d419;
-    background-color: #20d419;
+    border: 1px solid #142668;
+    background-color: white;
+    color: #142668;
 }

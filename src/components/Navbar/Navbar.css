@@ -1,46 +1,26 @@
 .navigation {
-  grid-area: nav;
-  min-height: 400px;
-  background-color: rgb(8, 8, 8);
-  font-size: 20px;
-  font-weight: bolder;
-  padding: 20px 0;
+    grid-area: nav;
+    padding: 50px 0;
 }
 
 .navigation__link {
-  font-family: 'Fugaz One', cursive;
-  display: block;
-  text-decoration: none;
-  color: rgb(255, 247, 247);
-  padding-bottom: 10px;
-  margin-left: 10%;
-  transition: 0.1s;
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition: 0.1s;
+    font-weight: normal;
+    font-size: 15px;
+    margin-bottom: 20px;
 }
 
 .navigation__link:hover {
-  color: #ff4c51;
+    color: #142668;
 }
 
 .active-link {
-  color: rgb(232, 177, 18);
+    font-weight: bolder;
 }
 
-.friends__sign {
-  text-align: center;
-}
-
-.friends-list {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  margin: 0 auto;
-}
-
-.friend-description__ava {
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-}
 
 
 

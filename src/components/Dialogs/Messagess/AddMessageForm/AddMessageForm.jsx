@@ -4,7 +4,7 @@ import {Field, reduxForm} from "redux-form";
 
 const AddMessageForm = props => {
     return (
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={props.handleSubmit} className="add-message__wrapper">
             <Field
                 name="messageBody"
                 component="textarea"

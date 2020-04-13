@@ -10,7 +10,7 @@ export const Preloader = () => (
                         <div className="cssload-square">
                             <div className="cssload-square">
                                 <div className="cssload-square">
-                                    <div className="cssload-square" />
+                                    <div className="cssload-square"/>
                                 </div>
                             </div>
                         </div>
@@ -23,7 +23,7 @@ export const Preloader = () => (
                         <div className="cssload-square">
                             <div className="cssload-square">
                                 <div className="cssload-square">
-                                    <div className="cssload-square" />
+                                    <div className="cssload-square"/>
                                 </div>
                             </div>
                         </div>
@@ -36,7 +36,7 @@ export const Preloader = () => (
                         <div className="cssload-square">
                             <div className="cssload-square">
                                 <div className="cssload-square">
-                                    <div className="cssload-square" />
+                                    <div className="cssload-square"/>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +49,7 @@ export const Preloader = () => (
                         <div className="cssload-square">
                             <div className="cssload-square">
                                 <div className="cssload-square">
-                                    <div className="cssload-square" />
+                                    <div className="cssload-square"/>
                                 </div>
                             </div>
                         </div>

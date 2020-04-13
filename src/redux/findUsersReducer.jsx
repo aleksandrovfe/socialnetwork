@@ -10,7 +10,7 @@ const TOGGLE_IS_FOLLOWING = 'TOGGLE_IS_FETCHING';
 
 const initislState = {
     UsersData: [],
-    pageSize: 10,
+    pageSize: 6,
     totalCount: 0,
     portionSize: 10,
     currentPage: 1,

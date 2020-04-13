@@ -1,16 +1,27 @@
 
+.dialogs__item-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    width: 170px;
+    height: 60px;
+    padding-left: 20px;
+}
+
 .dialogs__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  height: 30px;
-  padding: 15px 0;
-  font-style: oblique;
-  font-weight: bolder;
+    color: black;
+    font-weight: bolder;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.dialogs__item-last-message {
+    font-size: 14px;
+    color: #777777;
 }
 
 .dialogs__item--active {
-  background-color: black;
+    background-color: #F8F8F8;
+    transition: 0.3s;
 }

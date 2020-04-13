@@ -27,10 +27,12 @@ export const ProfileStatus = props => {
         <div className="personal-information__item personal-information__item-status">
             {!editMode
                 ? props.isOwner
-                    ? <div className="status__text" onDoubleClick={activateMode}>{status || "Double click to change status..."}</div>
+                    ? <div className="status__text"
+                           onDoubleClick={activateMode}>{status || "Double click to change status..."}</div>
                     : <div className="status__text">{status || "My status could be here..."}</div>
-                : props.isOwner 
-                    ? <input onChange={onStatusChange} autoFocus={true} value={status} onBlur={deactivateMode} className="status__input" type="text"/>
+                : props.isOwner
+                    ? <input onChange={onStatusChange} autoFocus={true} value={status} onBlur={deactivateMode}
+                             className="status__input" type="text"/>
                     : ''
             }
         </div>

@@ -59,6 +59,6 @@ export const savePhotoAPI = file => {
         headers: {
             'Content-type': 'multipart/form-data',
         }
-    } )
+    })
 };
 

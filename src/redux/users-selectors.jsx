@@ -26,3 +26,6 @@ export const getPortionSizeSelector = (state) => {
     return state.findUsersReducer.portionSize;
 };
 
+export const getIdSelector = (state) => {
+    return state.authReducer.userId;
+};

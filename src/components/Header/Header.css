@@ -1,47 +1,69 @@
+.header__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background: #142668;
+    z-index: -1;
+}
+
 .header {
-  grid-area: header;
-  background-color: rgb(0, 0, 0);
-  display: flex;
+    grid-area: header;
+    background: #142668;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__sign {
-  margin: 5px auto;
-  color: white;
-  font-family: 'Monoton', cursive;
-  text-transform: uppercase;
-  font-size: 35px;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    line-height: 30px;
 }
 
-.header__fixed {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgb(59, 48, 48);
-  z-index: 10;
+.header__sign-link {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+    box-sizing: border-box;
 }
 
-.header__login-name {
-  margin-left: 20px;
+.header__sign-link:hover {
+    border-bottom: 1px solid white;
 }
 
-.header__login-link {
-  margin: 10px 20px 0 0;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px;
-  border: 1px solid white;
+.header__user-auth {
+    display: flex;
+    align-items: center;
 }
 
-.header__login-link:hover {
-  background-color: #e8b112;
-  border: 1px solid white;
+.header__avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
-.header__login-link:active {
-  color: red;
-  background-color: black;
-  border: 1px solid red;
+.header__sign-link-sign-up {
+    background-color: white;
+    color: #142668;
+    padding: 10px 15px;
+    margin-left: 30px;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
+
+.header__sign-link-sign-up:hover {
+    background-color: #142668;;
+    color: white;
+    border-bottom: 1px solid transparent;
+    border: 1px solid white;
 }

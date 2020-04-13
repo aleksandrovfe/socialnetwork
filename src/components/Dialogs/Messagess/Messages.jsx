@@ -7,14 +7,19 @@ const Messages = props => {
         props.onSendMessageCLick(event.messageBody);
     };
 
-  return (
-    <div>
-      {props.MessagesData.map(el => (
-      <div key={el.message} className="dialog__conv">{el.message}</div>
-      ))}
-      <AddMessageResuxForm onSubmit={addNewMessage} {...props}/>
-    </div>
-  )
+    return (
+        <div className="dialog__wrapper">
+            <div className="dialog__background">
+                {props.MessagesData.map(el => (
+                    <div key={el.id}>
+                        <p className="dialog__user-name">Alex</p>
+                        <p key={el.message} className="dialog__message">{el.message}</p>
+                    </div>
+                ))}
+            </div>
+            <AddMessageResuxForm onSubmit={addNewMessage} {...props}/>
+        </div>
+    )
 };
 
 export default Messages;

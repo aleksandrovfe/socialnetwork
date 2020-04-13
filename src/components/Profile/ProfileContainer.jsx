@@ -7,7 +7,8 @@ import {
     getStatusThunk,
     savePhotoThunk,
     saveProfileInfoThunk,
-    updateStatusThunk
+    updateStatusThunk,
+    getUserAvatarThunk,
 } from "../../redux/profile-reducer";
 import {withRouter} from "react-router-dom";
 import WithAuthRedirect from "../../HOC/WithAuthRedirect";
@@ -15,6 +16,7 @@ import {compose} from "redux";
 
 class ProfileContainer extends React.Component {
     refreshProfile() {
+        this.props.getUserAvatarThunk(this.props.authorizedUserId)
         let userId = this.props.match.params.userId;
         if (!userId) {
             userId = this.props.authorizedUserId;
@@ -22,11 +24,12 @@ class ProfileContainer extends React.Component {
         this.props.getProfileThunk(userId);
         this.props.getStatusThunk(userId);
     }
+
     componentDidMount() {
         this.refreshProfile();
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
+    componentDidUpdate(prevProps) {
         if (this.props.match.params.userId !== prevProps.match.params.userId) {
             this.refreshProfile();
         }
@@ -57,6 +60,7 @@ export default compose(
         updateStatusThunk,
         savePhotoThunk,
         saveProfileInfoThunk,
+        getUserAvatarThunk,
     })
 )(ProfileContainer);
 

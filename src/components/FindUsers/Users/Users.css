@@ -1,87 +1,70 @@
 .users-list {
-    margin: 10px 0;
+    background-color: #F8F8F8;
+    width: 91%;
+    padding: 30px 100px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
 }
 
 .user {
     display: flex;
+    align-items: center;
+    background-color: white;
+    height: 110px;
     margin-bottom: 10px;
-}
-
-.user__avatar-container {
-    position: relative;
-    width: 200px;
-    height: 210px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .user__avatar {
-    width: 100%;
-    height: 100%;
-}
-
-.user__unfollow-btn,
-.user__follow-btn,
-.user__unfollow-btn-disable,
-.user__follow-btn-disable {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    opacity: 0.7;
-    background-color: transparent;
-    text-align: center;
-    color: #ff4c51;
-    user-select: none;
-    transition: 0.3s;
-    font-weight: bolder;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.user__unfollow-btn-disable,
-.user__follow-btn-disable {
-    background-color: yellow;
-    opacity: 1;
-    color: #e2001c;
-    pointer-events: none;
-}
-
-.user__follow-btn {
-    color: lightgreen;
-}
-
-.user__avatar-container:hover .user__unfollow-btn,
-.user__avatar-container:hover .user__follow-btn {
-    opacity: 1;
-}
-
-.user__unfollow-btn:active {
-    background-color: #ff4c51;
-    color: white;
-}
-
-.user__follow-btn:active {
-    background-color: lightgreen;
-    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
 }
 
 .user__description {
-    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 30px;
 }
 
 .user__description-item {
-    margin: 5px 0;
-    background-color: black;
-    padding: 10px;
-    box-shadow: 0 0 10px black;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0 0;
 }
 
 .user__description-item-status {
-    margin: 5px 0;
-    background-color: black;
-    padding: 10px;
     text-align: center;
     display: inline-block;
+    margin: 0;
+    color: #777777;
+    font-size: 14px;
 }
 
 
+.user__unfollow-btn,
+.user__follow-btn {
+    width: 20%;
+    height: 40px;
+    opacity: 0.7;
+    background-color: #142668;
+    text-align: center;
+    color: white;
+    user-select: none;
+    transition: 0.3s;
+    font-size: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border: 1px solid transparent;
+    margin-left: auto;
+    transition: 0.3s;
+}
+
+.user__unfollow-btn:hover,
+.user__follow-btn:hover {
+    background-color: white;
+    color: #142668;
+    border: 1px solid #142668;
+}

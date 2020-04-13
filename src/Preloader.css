@@ -3,12 +3,13 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    min-height: 800px;
 }
 
 .cssload-square {
     width: 5px;
     height: 29px;
-    background: lightgray;
+    background: #142668;
     border-radius: 10px;
     display: block;
     animation: cssload-turn 2s ease infinite;
@@ -152,7 +153,7 @@
 }
 
 .form:focus-within {
-    background: rgba(0,0,0,0.05);
+    background: rgba(0, 0, 0, 0.05);
     border-bottom: 2px solid gray;
 }
 

@@ -4,6 +4,7 @@ const ADD_POST = 'ADD_POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_USER_STATUS = 'SET_USER_STATUS';
 const SAVE_PHOTO = 'SAVE_PHOTO';
+const GET_USER_AVATAR = 'GET_USER_AVATAR';
 const SAVE_PROFILE = 'SAVE_PROFILE';
 
 const initalState = {
@@ -15,6 +16,7 @@ const initalState = {
         ],
         profile: null,
         status: null,
+        userAvatar: '',
 };
 
 export const profileReducer = (state = initalState, action) => {
@@ -40,6 +42,13 @@ export const profileReducer = (state = initalState, action) => {
                 ...state,
                 profile: {...state.profile, photos: action.file},
             };
+
+        case GET_USER_AVATAR:
+            return {
+                ...state,
+                userAvatar: action.avatar,
+            };
+
         case SAVE_PROFILE:
             return {
                 ...state,
@@ -71,6 +80,11 @@ export const savePhotoSuccess = file => ({
     file,
 });
 
+export const getUserAvatar = avatar => ({
+    type: GET_USER_AVATAR,
+    avatar,
+});
+
 export const saveProfileSuccess = profile => ({
     type: SAVE_PROFILE,
     profile,
@@ -80,6 +94,13 @@ export const getProfileThunk = (id) => {
     return async(dispatch) => {
         const response = await getProfile(id);
         dispatch(setUserProfile(response.data));
+    };
+};
+
+export const getUserAvatarThunk = (id) => {
+    return async(dispatch) => {
+        const response = await getProfile(id);
+        dispatch(getUserAvatar(response.data.photos.large))
     };
 };
 

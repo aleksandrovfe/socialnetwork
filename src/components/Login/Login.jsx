@@ -14,11 +14,11 @@ const Login = props => {
         return <Redirect to="/profile"/>
     }
 
-  return (
-      <div>
-          <LoginResuxForm onSubmit={onSubmit}/>
-      </div>
-  )
+    return (
+        <div>
+            <LoginResuxForm onSubmit={onSubmit}/>
+        </div>
+    )
 };
 
 const mapStateToProps = state => ({
