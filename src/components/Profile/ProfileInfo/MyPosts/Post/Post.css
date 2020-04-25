@@ -1,20 +1,20 @@
 .post-item {
-    margin: 0 0 10px 0;
-    background-color: white;
-    width: 100%;
-    padding: 20px;
-    font-size: 14px;
-    color: #252525;
-    box-sizing: border-box;
+  margin: 0 0 10px 0;
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  font-size: 14px;
+  color: #252525;
+  box-sizing: border-box;
 }
 
 .posts__sign {
-    margin: 30px 0 20px 0;
-    color: #CDCDCD;
-    font-size: 16px;
+  margin: 30px 0 20px 0;
+  color: #cdcdcd;
+  font-size: 16px;
 }
 
 .posts-list {
-    display: flex;
-    flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column;
 }
